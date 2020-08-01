@@ -31,5 +31,7 @@ fixture(fixtureName)
         console.log(Message);
         console.log(Message);
         console.log(Message);
+        console.log(Message);
+        console.log(Message);
 
     })
