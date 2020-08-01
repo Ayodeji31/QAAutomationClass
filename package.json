@@ -1,0 +1,14 @@
+{
+  "name": "QATestFramework",
+  "version": "1.0.0",
+  "description": "QAFramework",
+  "main": "index.js",
+  "author": "QA Automation",
+  "license": "MIT",
+  "dependencies": {
+    "testcafe": "^1.8.7"
+  },
+  "scripts": {
+    "test:chrome": "testcafe -c 1 chrome src/tests/**.js  -S -s src/reports --skip-js-errors"
+  }
+}
