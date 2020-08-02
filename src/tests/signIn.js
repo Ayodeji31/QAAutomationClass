@@ -29,5 +29,9 @@ fixture(fixtureName)
 
         const Message = await wrongEmail.innerText
         console.log(Message);
+        console.log(Message);
+        console.log(Message);
+        console.log(Message);
+        console.log(Message);
 
     })
