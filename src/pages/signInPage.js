@@ -9,7 +9,7 @@ class SigninPage {
     typePasswordField = Selector('[id="join_neu_password_field"]')
     
     selectSignInButton = Selector('[name="submit_attempt"]')
-    
+
     selectRegisterButton = Selector('.wt-btn.wt-btn--outline.wt-btn--small.inline-overlay-trigger.register-header-action.select-register')
 
 
@@ -24,6 +24,16 @@ class SigninPage {
              .click(homepage.signOutButton);
 
  }
+
+ signInwithWrongEmailAndCorrectPassword = async (email, pass) =>{
+    await t 
+            .typeText(this.typeEmailAddress, email)
+            .typeText(this.typePasswordField, pass)
+            .click(this.selectSignInButton)
+            .click(homepage.signOutDropdown)
+            .click(homepage.signOutButton);
+
+}
 
 }
 export default new SigninPage();
