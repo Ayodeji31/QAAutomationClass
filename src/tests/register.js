@@ -12,11 +12,8 @@ fixture(fixtureName)
     .page (config.QAetsy);
 
 
-
     test('Register to Etsy', async t =>{
-
-        await t.click(homepage.AcceptCookies)
-        await t.click(homepage.selectSignInButton)
+        await homepage.proceedToAcceptCookies()
         await t.click(signinpage.selectRegisterButton)
         await register.createCustomerAccount(randomEmail)
     });

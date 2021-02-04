@@ -13,17 +13,22 @@ selectSignInButton = Selector('.wt-btn.wt-btn--small.wt-btn--transparent.wt-mr-x
 
 selectCartButton = Selector('span').withText('Cart')
 
-signOutDropdown = Selector('.nav-icon.nav-icon-image.nav-icon-circle')
+signOutDropdown = Selector('[aria-label="Your account"]')
 
 signOutButton = Selector('.subnav-text-link.sign-out')
 
 
 
-searchForProduct = async () =>{
-    await t .click(this.AcceptCookies)
+   searchForProduct = async () =>{
+     await t .click(this.AcceptCookies)
             .typeText(this.selectSearchField, 'bag')
             .click(this.selectSearchButton)
-}
+    }
+
+    proceedToAcceptCookies = async () =>{
+        await t .click(this.AcceptCookies)
+                .click(this.selectSignInButton)
+    }
 
 }
 export default new Homepage();

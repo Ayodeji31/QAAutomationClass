@@ -12,10 +12,14 @@ class SigninPage {
 
     selectRegisterButton = Selector('.wt-btn.wt-btn--outline.wt-btn--small.inline-overlay-trigger.register-header-action.select-register')
 
+    message = Selector('[id="aria-join_neu_email_field-error"]').withText('Email address is invalid.')
+
+    passwordMessage = Selector('[id="aria-join_neu_password_field-error"]').withText('Password was incorrect.')
 
 
 
- signInwithCorrectCredentials = async (email, pass) =>{
+
+    signInwithCorrectCredentials = async (email, pass) =>{
      await t 
              .typeText(this.typeEmailAddress, email)
              .typeText(this.typePasswordField, pass)
@@ -23,17 +27,25 @@ class SigninPage {
              .click(homepage.signOutDropdown)
              .click(homepage.signOutButton);
 
- }
+    }
 
- signInwithWrongEmailAndCorrectPassword = async (email, pass) =>{
-    await t 
+    signInwithWrongEmailAndCorrectPassword = async (email, pass) =>{
+        await t 
             .typeText(this.typeEmailAddress, email)
             .typeText(this.typePasswordField, pass)
             .click(this.selectSignInButton)
-            .click(homepage.signOutDropdown)
-            .click(homepage.signOutButton);
+        await t.expect(this.message.exists).ok()
 
-}
+    }
+
+    signInwithCorrectEmailAndIncorrectPassword = async (email, pass) =>{
+        await t 
+                .typeText(this.typeEmailAddress, email)
+                .typeText(this.typePasswordField, pass)
+                .click(this.selectSignInButton)
+        await t.expect(this.passwordMessage.exists).ok()
+
+    }
 
 }
 export default new SigninPage();

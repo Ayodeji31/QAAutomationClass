@@ -11,31 +11,16 @@ fixture(fixtureName)
     .page (config.QAetsy);
 // Signin with correct
     test('SingIn to Etsy account with correct credentials', async t =>{
-        await t.click(homepage.AcceptCookies)
-        await t.click(homepage.selectSignInButton)
+        await homepage.proceedToAcceptCookies()
         await signinpage.signInwithCorrectCredentials(config.email, config.password)
     });
-
 // Signin wrong email address
     test('Sign-In with wrong user name and correct password', async t =>{
-        await t.click(homepage.AcceptCookies)
-               .click(homepage.selectSignInButton)
+        await homepage.proceedToAcceptCookies()
         await signinpage.signInwithWrongEmailAndCorrectPassword(config.wrongEmailAddress, config.password)
-        await t
-    
-        const wrongEmail = await Selector('[id="aria-join_neu_email_field-error"]')
-        await t.expect(wrongEmail.exists).ok()
-
-        const Message = await wrongEmail.innerText
-        console.log(Message);
-        console.log(Message);
-        console.log(Message);
-        console.log(Message);
-        console.log(Message);
-
     })
-
+// SignIn with wrong password
     test('SignIn with Correct email and a wrong password', async t =>{
-
-
+        await homepage.proceedToAcceptCookies()
+        await signinpage.signInwithCorrectEmailAndIncorrectPassword(config.email, "config.password")  
     })
