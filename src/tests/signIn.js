@@ -8,7 +8,7 @@ import register from '../pages/registerPage'
 const fixtureName = 'SignIn functionality'
 
 fixture(fixtureName)
-    .page (config.QAetsy);
+    .page (config.QABankApp);
 // Signin with correct
     test('SingIn to Etsy account with correct credentials', async t =>{
         await homepage.proceedToAcceptCookies()
