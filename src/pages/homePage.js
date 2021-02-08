@@ -9,7 +9,7 @@ selectSearchField = Selector('[id="searchTerm"]')
 
 selectOnlineBanking = Selector('[id="onlineBankingMenu"]')
 
-selectSignInButton = Selector('icon-signin')
+selectSignInButton = Selector('[id="signin_button"]')
 
 signOutButton = Selector('.subnav-text-link.sign-out')
 

@@ -1,8 +1,8 @@
 
 
 export default{
-email: 'tope2g@yahoo.com',
-password:'Today18',
+user: 'username',
+password:'password',
 
 QAetsy: 'https://www.etsy.com/',
 QABankApp: 'http://zero.webappsecurity.com/',
