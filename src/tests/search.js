@@ -1,19 +1,18 @@
 import { Selector } from 'testcafe';
 
 import homepage from '../pages/homePage'
-import signinpage from '../pages/signInPage'
 import config from '../module/config'
-import register from '../pages/registerPage'
+import search from '../pages/searchResultPage'
 
 const fixtureName = 'Search functionality'
- const randomEmail = `goldenfish${Math.floor(Math.random() * 1000)}@gmail.com`;
 
 fixture(fixtureName)
-    .page (config.QAetsy);
+    .page (config.QABankApp);
 
 //Search for product
-    test('Search with valid product', async t => {
+    test('Search for product', async t => {
         await homepage.searchForProduct()
+        await search.verifyProductSearch()
     });
 
 

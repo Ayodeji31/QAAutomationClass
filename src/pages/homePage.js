@@ -16,7 +16,7 @@ signOutButton = Selector('.subnav-text-link.sign-out')
 
 
 searchForProduct = async () =>{
-    await t .typeText(this.selectSearchField, 'banking')
+    await t .typeText(this.selectSearchField, 'online banking')
             .pressKey('enter')
 }
 
