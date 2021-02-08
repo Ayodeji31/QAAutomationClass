@@ -1,11 +1,12 @@
 
 
 export default{
-email: 'tope2g@yahoo.com',
-password:'Today18',
-wrongEmailAddress: 'tope2eedg@yahoo.com',
-wrongPassword:'Today188',
+user: 'username',
+password:'password',
 
-QAetsy: 'https://www.etsy.com/'
+QAetsy: 'https://www.etsy.com/',
+QABankApp: 'http://zero.webappsecurity.com/',
+
+message: 'IMPORTANT! This feedback facility is not secure. Please do not send anyaccount information in a message sent from here.'
 
 }
