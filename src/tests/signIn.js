@@ -1,9 +1,9 @@
 import { Selector } from 'testcafe';
 
 import homepage from '../pages/homePage'
-import signinpage from '../pages/signInPage'
+import signinpage from '../pages/loginPage'
 import config from '../module/config'
-import register from '../pages/registerPage'
+import register from '../pages/myAccountPage'
 
 const fixtureName = 'SignIn functionality'
 
