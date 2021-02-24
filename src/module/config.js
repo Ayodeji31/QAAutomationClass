@@ -3,6 +3,7 @@
 export default{
 user: 'username',
 password:'password',
+payeeName : 'Adamu Shekone',
 
 QAetsy: 'https://www.etsy.com/',
 QABankApp: 'http://zero.webappsecurity.com/',

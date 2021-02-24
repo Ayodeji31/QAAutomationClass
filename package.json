@@ -14,7 +14,7 @@
     "testcafe-reporter-xunit": "^2.1.0"
   },
   "scripts": {
-    "test:chrome": "testcafe -c 1 chrome src/tests/payBills.js  -S -s src/reports --skip-js-errors --reporter list",
+    "test:chrome": "testcafe -c 1 chrome src/tests/*.js  -S -s src/reports --skip-js-errors --reporter list",
     "test:chrome:headless": "testcafe chrome:headless src/tests/**.js  -S -s src/reports --skip-js-errors",
     "test:firefox": "testcafe -c 1 firefox src/tests/**.js  -S -s src/reports --skip-js-errors",
     "test:safari": "testcafe -c 1 safari src/tests/**.js  -S -s src/reports --skip-js-errors",

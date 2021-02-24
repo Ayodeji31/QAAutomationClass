@@ -10,6 +10,8 @@ class PayBillsPage{
 
     selectAccountOption = Selector('[name="account"]')
 
+    selectAddNewPayee = Selector('a').withText('Add New Payee')
+
     inputAmount = Selector('[id="sp_amount"]')
 
     inputDate = Selector('[id="sp_date"')
@@ -20,14 +22,14 @@ class PayBillsPage{
 
     verifyPaymentSuccess = Selector('span').withText('The payment was successfully submitted.')
 
-    makePaymentToSavedPayees = async () => {
-        
+    makePaymentToSavedPayees = async () => {   
         await t.click(this.selectPayee)
                .click(this.selectPayeeOption.withText('Bank of America'))
                .click(this.selectAccount)
                .click(this.selectAccountOption.withText('Brokerage'))
                .typeText(this.inputAmount, '500')
                .typeText(this.inputDate, '2021-03-15')
+               .pressKey('enter')
                .typeText(this.selectDescription, 'Vehicle payment')
                .click(this.selectPayButton)
                .expect(this.verifyPaymentSuccess.exists).ok()
