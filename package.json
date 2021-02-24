@@ -14,11 +14,12 @@
     "testcafe-reporter-xunit": "^2.1.0"
   },
   "scripts": {
-    "test:chrome": "testcafe -c 1 chrome src/tests/*.js  -S -s src/reports --skip-js-errors --reporter list",
+    "test:chrome": "testcafe -c 1 chrome src/tests/payBills.js  -S -s src/reports --skip-js-errors --reporter list",
     "test:chrome:headless": "testcafe chrome:headless src/tests/**.js  -S -s src/reports --skip-js-errors",
     "test:firefox": "testcafe -c 1 firefox src/tests/**.js  -S -s src/reports --skip-js-errors",
     "test:safari": "testcafe -c 1 safari src/tests/**.js  -S -s src/reports --skip-js-errors",
     "test:chrome:mobile": "testcafe chrome:emulation:device=iphone 12 Pro Max src/tests/*.js  -S -s src/reports --skip-js-errors",
+    "test:browsers": "testcafe -c 1 firefox,safari src/tests/*.js --skip-js-errors --reporter list",
     "start-jenkins-server": "java -jar jenkins.war -httpPort=8080 --enable-future-java"
   }
 }

@@ -1,5 +1,4 @@
 import { Selector } from 'testcafe';
-
 import homepage from '../pages/homePage'
 import signinpage from '../pages/loginPage'
 import config from '../module/config'
